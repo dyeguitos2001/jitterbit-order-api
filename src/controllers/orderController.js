@@ -1,18 +1,4 @@
 const Order = require('../models/Order');
-      message: 'Erro interno ao buscar pedido.',
-      error: error.message
-    });
-  }
-}
-
-// Retorna todos os pedidos cadastrados, ordenados pela data de criação.
-async function listOrders(req, res) {
-  try {
-    const orders = await Order.find().sort({ creationDate: -1 });
-    return res.status(200).json(orders);
-  } catch (error) {
-    return res.status(500).json({
-      message: 'Erro interno ao listar pedidos.',
       error: error.message
     });
   }
