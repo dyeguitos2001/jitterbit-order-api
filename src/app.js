@@ -1,4 +1,6 @@
 const express = require('express');
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./config/swagger');
 const orderRoutes = require('./routes/orderRoutes');
 
 const app = express();
@@ -12,6 +14,9 @@ app.get('/', (req, res) => {
     message: 'API de pedidos Jitterbit rodando com sucesso.'
   });
 });
+
+// Endpoint da documentação Swagger.
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Rotas principais da API.
 app.use('/', orderRoutes);
