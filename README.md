@@ -1,25 +1,28 @@
 # Jitterbit Order API
 
-API CRUD de pedidos desenvolvida em Node.js com Express e MongoDB para o teste técnico da Jitterbit.
+API RESTful desenvolvida como solução para o teste técnico da Jitterbit.
 
-## Tecnologias
+## Objetivo
+Esta aplicação permite criar, consultar, listar, atualizar e remover pedidos, realizando o mapeamento do payload recebido antes da persistência no banco MongoDB, conforme especificado no enunciado do desafio.
+
+## Tecnologias utilizadas
 - Node.js
 - Express
 - MongoDB
 - Mongoose
 - Dotenv
 - Nodemon
+- Swagger
 
-## Funcionalidades
-- Criar pedido
-- Buscar pedido por ID
-- Listar pedidos
-- Atualizar pedido
-- Remover pedido
-- Transformar payload de entrada antes de salvar no banco
+## Diferenciais implementados
+- CRUD completo de pedidos
+- Transformação de payload antes de salvar no banco
+- Validação de dados de entrada
+- Tratamento de erros com respostas HTTP adequadas
+- Estrutura organizada em camadas
+- Documentação com Swagger
 
-## Estrutura esperada do payload de entrada
-
+## Estrutura do payload de entrada
 ```json
 {
   "numeroPedido": "v10089015vdb-01",
