@@ -1,14 +1,4 @@
 const Order = require('../models/Order');
-      error: error.message
-    });
-  }
-}
-
-// Atualiza um pedido existente com base no orderId informado na rota.
-async function updateOrder(req, res) {
-  try {
-    const { id } = req.params;
-    const validationError = validateCreatePayload(req.body);
 
     if (validationError) {
       return res.status(400).json({ message: validationError });
